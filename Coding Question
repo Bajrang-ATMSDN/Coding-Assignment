@@ -1,6 +1,9 @@
+
 Class java{
 public static void main (String [] args )
 {
-    Systrm.out.println(""Hello world);
+    System.out.println("Hello world");
+    System.out.println("Learn Core Java");
+    
     }
 
