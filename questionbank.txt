@@ -1,0 +1,240 @@
+
+package Assignment;
+
+public class Concept {
+	
+	static String con1 = "Electric Charges and Fields - 1 Q";
+	
+    static	String con2 = "Gaussian surface - 1 Q";
+	
+	static String con3 = "Electric dipole - 2 Q" ;
+	
+	static String con4 = "Electrostatic field - 4 Q" ;
+	
+	static String con5 = "Electric flux - 1 Q" ;
+	
+	static String con6 = "Magnetic field - 1 Q";
+	
+	
+	Concept ()
+	{
+		
+	}
+     
+	public void displaymaxConcept()
+	{
+		
+			System.out.println(con4);
+	
+			
+	}
+		
+	public void displayminconcept()
+	{
+
+		System.out.println(con1);
+		System.out.println(con2);
+		System.out.println(con5);
+		System.out.println(con6);
+	
+	
+	}
+		
+	
+}
+
+
+
+
+
+
+
+
+//blueprint class
+
+package Assignment;
+
+public class QuestionBank {
+        
+	
+	 String q1 = "1.Which orientation of an electric dipole in a Which orientation of an electric dipole in a equilibrium ?" ;
+    
+	 String q2 = "2.If the radius of the Gaussian surface enclosing a charge is halved, how does the electric flux through the Gaussian surface change ?" ;
+	
+	 String q3 = "3.Define the term electric dipole moment of a dipole. State its S.I. unit" ;
+	
+	 String q4 = "4.In which orientation, a dipole placed in a uniform electric field is in unstable equilibrium ?" ;
+	
+	 String q5  = "5.Why should electrostatic field be zero inside a conductor? " ;
+	
+	 String q6  = "6.Why must electrostatic field be normal to the surface at every point of a charged conductor?" ;
+	
+     String q7 =  "7.A charge ‘q’ is placed at the centre of a cube of side l. What is the electric flux passing through each face of the cube? (All India 2012)" ;
+	
+	 String q8 =  "8.Depict the direction of the magnetic field lines due to a circular current carrying loop.";
+	
+	 String q9 =  "9.Why do the electric field lines not form closed loops? ";
+	
+	 String q10 = "10.Is the electric field due to a charge configuration with total charge zero, necessarily zero? ";
+	
+	 Concept c ;
+	
+	
+	
+	
+	  public QuestionBank () 
+	  {
+		  
+	  }
+  
+	  
+	  public void getquestion(int year)
+	  {    
+		 
+		  
+		   if(year == 2012)
+		   {
+			  System.out.println(q5);
+			  System.out.println(q6);
+			  System.out.println(q8);
+		   }
+		   
+		   else if(year == 2013)
+		   {
+			   System.out.println(q9);
+			  
+		   }
+		   else if (year == 2014)
+		   {
+			   System.out.println(q4);
+			   
+		   }
+		   else if(year == 2015) 
+		   {
+			   System.out.println(q7);
+			   System.out.println(q9);
+		   }
+		   else if(year == 2016)
+		   {
+			   System.out.println(q3);
+		   }
+		   else if (year == 2017)
+		   {
+			   System.out.println("No question for this year");
+		   }
+		   else if(year == 2018)
+		   {
+			   System.out.println(q1);
+			   System.out.println(q4);
+			   System.out.println(q6);
+		   }
+		   
+		   else if(year == 2019)
+		   {
+			   System.out.println(q2);
+			   System.out.println(q5);
+			   System.out.println(q10);
+		   }
+		   else if(year == 2020)
+		   {
+			   System.out.println(q1);
+			   System.out.println(q3);
+			   System.out.println(q4);
+			   System.out.println(q7);
+			   System.out.println(q9);
+		   }
+		   
+		   else if(year == 2021)
+		   {
+			   System.out.println(q2);
+			   System.out.println(q6);
+			   System.out.println(q10);
+		   }
+		   
+		   else if (year == 2022)
+		   {
+			   System.out.println(q8);
+		   }
+		   
+		   else
+		   {
+			   System.out.println("Give right input");
+		   }
+		   
+		  
+		   
+	  }
+         
+	  public void getconceptofmaxquestion()
+	  {
+		 c = new Concept();
+	     c.displaymaxConcept();    
+		 
+	  }
+	  
+	  public void getconceptofminquestion()
+	  {
+		  c = new Concept();
+		  c.displayminconcept();
+	  }
+
+		
+	}
+	  
+	
+// Driver Class
+
+    package Assignment;
+
+import java.util.Scanner;
+
+public class QuestionBankDriver {
+	
+	public static void main(String[] args) {
+		
+		QuestionBank qb = new QuestionBank();
+		
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Type 'Q' if want to display a Questions for given year Or Type 'C' if want to disply a concept which has maximum Question in Question Bank");
+		
+		  String s = sc.nextLine();
+		   
+		  if(s.equalsIgnoreCase("Q"))
+		  {   
+			  System.out.println("Enter the year for questions");
+			  int year = sc.nextInt();
+			   
+			  qb.getquestion(year);
+		  }	
+		  
+		  else if (s.equalsIgnoreCase("C"))
+		  {   
+			  System.out.println("Type 'max' for maximum qustions concept or typr min for minumum questions concept");
+			  
+			  String ss = sc.nextLine();
+			  
+			  if(ss.equalsIgnoreCase("max"))
+			  {
+			   qb.getconceptofmaxquestion();
+			  }
+			  
+			  else if(ss.equalsIgnoreCase("min"))
+			  {
+				  qb.getconceptofminquestion();
+			  }
+			  
+			  else {
+				  
+				  System.out.println("Wrong input");
+			  }
+			  
+			 }
+		  }
+	}
+
+
+
+      
+   
+					
