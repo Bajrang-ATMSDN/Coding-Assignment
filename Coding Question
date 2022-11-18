@@ -6,6 +6,7 @@ public static void main (String [] args )
     System.out.println("Learn Core Java");
     System.out.println("Java Stroke");
     System.out.println("Updated in eclipse");
+    System.out.println("Updated in Git");
     
     
     }
